@@ -3,16 +3,16 @@
   <div class="col-md center-wrapper">
     <div class="input-group mb-3" style="width: 80%">
       <span class="input-group-text" id="basic-addon1">Enter a City Name</span>
-      <input type="text" class="form-control" placeholder="City Name" aria-label="City Name" aria-describedby="basic-addon2">
-      <button class="btn btn-success">Submit</button>
+      <input type="text" (keyup)="getText($event.target.value)" class="form-control" placeholder="City Name" aria-label="City Name" aria-describedby="basic-addon2">
+      <button (click)="onClick()" class="btn btn-success">Submit</button>
     </div>
   </div>
 </div>
 <div class="row">
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">Enter a city to get the weather!</h5>
-      <p class="card-text">No information found.</p>
+      <h5 class="card-title">{{displayName}}</h5>
+      <p class="card-text">{{temp}}</p>
     </div>
   </div>
 </div>
